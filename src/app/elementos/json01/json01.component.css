@@ -1,0 +1,15 @@
+.marco{
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo {
+    color: rgb(67, 40, 165);
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+}

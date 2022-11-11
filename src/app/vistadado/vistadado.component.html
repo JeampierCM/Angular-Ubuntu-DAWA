@@ -1,0 +1,38 @@
+<!--
+<div style="text-align:center;border: 2px solid black; padding: 10px; margin: 10px;">
+    <h1>CAPTURA DE EVENTOS</h1>
+    <app-dado valor="4"></app-dado>
+    <app-dado valor="5"></app-dado>
+    <app-dado valor="6"></app-dado>
+</div>
+
+<div style="text-align:center;border: 2px solid black; padding: 10px; margin: 10px;">
+    <h1>CAPTURA DE EVENTOS + BOTON + METODO</h1>
+    <app-dado valor="{{valor1}}"></app-dado>
+    <app-dado valor="{{valor2}}"></app-dado>
+    <app-dado valor="{{valor3}}"></app-dado>
+    //<app-dado valor="{{valor}}"></app-dado> es lo mismo que <app-dado [valor]="valor"></app-dado> pero con el segundo se puede usar el valor en el componente hijo y 
+    el primero no
+    <hr>
+    <button (click)="tirar()">Tirar</button>  
+    <hr>
+    <p>Resultado:{{resultado}}</p>
+</div>
+-->
+<div style="text-align:center;border: 2px solid black; padding: 10px; margin: 10px;">
+    <h1>CAPTURA DE EVENTOS + BOTON + METODO</h1>
+    <app-dado [valor]="valor1"></app-dado>
+    <app-dado [valor]="valor2"></app-dado>
+    <app-dado [valor]="valor3"></app-dado>
+    <hr>
+    <button (click)="tirar()">Tirar</button>
+    <hr>
+    <p>Resultado: {{resultado}}</p>
+</div>
+<div style="text-align:center;border: 2px solid black; padding: 10px; margin: 10px;">
+    <h1>CRONOMETRO</h1>
+    <h2>Prueba de la componente cronometro</h2>
+    <app-cronometro [inicio]="15" (multiplo10)="actualizar($event)"></app-cronometro>
+    <h2>Evento</h2>
+    <h3>{{mensaje}}</h3>
+  </div>

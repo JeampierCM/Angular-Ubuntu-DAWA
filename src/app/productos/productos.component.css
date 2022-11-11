@@ -1,0 +1,8 @@
+.marco{
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,49 @@
+<style>
+    .titulo {
+        color: rgb(67, 40, 165);
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 2em;
+    }
+</style>
+<html>
+<div class="marco">
+  <h1 class="titulo">NUEVO PRODUCTO</h1>
+  <div class="formulario">
+    <p>
+      Codigo:<input type="number" [(ngModel)]="art.codigo" />
+    </p>
+    <p>
+      Descripcion:<input type="text" [(ngModel)]="art.descripcion" />
+    </p>
+    <p>
+      Precio:<input type="number" [(ngModel)]="art.precio" />
+    </p>            
+    <p><button type="button" class="btn btn-primary btn-lg btn-block"(click)="agregar()">Agregar</button>
+    <button type="button" class="btn btn-secondary btn-lg btn-block"(click)="modificar()">Modificar</button></p>
+  </div>
+  <h1 class="titulo">LISTA DE PRODUCTOS</h1>
+  <div *ngIf="hayRegistros(); else sinarticulos">
+    <table class="table table-striped">
+      <thead class="">
+      <tr>
+        <th scope="col">CODIGO</th>
+        <th scope="col">DESCRIPCION</th>
+        <th scope="col">PRECIO</th>
+        <th scope="col">ACCIONES</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let art of articulos">
+        <th scope="row">{{art.codigo}}</th>
+        <td>{{art.descripcion}}</td>
+        <td>{{art.precio}}</td>
+        <td><button class="btn btn-danger" (click)="borrar(art.codigo)">Borrar</button>
+             <button class="btn btn-success" (click)="seleccionar(art)">Seleccionar</button></td>        
+      </tr>
+      </tbody>
+    </table>
+  </div>
+    <ng-template #sinarticulos><p>No hay articulos.</p></ng-template>
+</div>
+</html>

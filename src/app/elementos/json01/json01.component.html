@@ -1,0 +1,22 @@
+<div class="marco">
+  <h1 class="titulo">TABLA DE PRODUCTOS</h1>
+<div *ngIf="articulos!=null; else espera">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">CODIGO</th>
+        <th scope="col">DESCRIPCION</th>
+        <th scope="col">PRECIO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let art of articulos">
+        <th scope="row">{{art.codigo}}</th>
+        <td>{{art.descripcion}}</td>
+        <td>{{art.precio}}</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+<ng-template #espera>Esperando datos...</ng-template>
+</div>  

@@ -1,0 +1,28 @@
+<div class="marco">
+  <h1 class="titulo">TABLA DE CASOS COVID</h1>
+<div *ngIf="paises!=null; else esperando">
+<table class="table table-striped table-dark">
+  <thead>
+  <tr>
+    <td>País</td><td>Nuevo Confirmado</td><td>Total Confirmado</td>
+    <td>Nuevas Muertes</td><td>Muertes Totales</td><td>Nuevo Recuperado</td>
+    <td>Total Recuperado</td><td>Fecha</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let pais of paises.Countries">
+    <th scope="row">{{pais.Country}}</th>
+    <td>{{pais.NewConfirmed}}</td>
+    <td>{{pais.TotalConfirmed}}</td>
+    <td>{{pais.NewDeaths}}</td>
+    <td>{{pais.TotalDeaths}}</td>
+    <td>{{pais.NewRecovered}}</td>
+    <td>{{pais.TotalRecovered}}</td>
+    <td>{{pais.Date}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+<ng-template #esperando>Esperando datos...</ng-template>
+</div>

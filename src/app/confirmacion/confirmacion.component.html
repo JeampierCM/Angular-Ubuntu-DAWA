@@ -1,0 +1,5 @@
+<div><b class="tex">{{text}} </b>
+    <span *ngIf="formParent.valid">✔</span>
+    <span *ngIf="!formParent.valid">🔴</span>
+</div>
+<pre>{{formParent.value | json}}</pre>

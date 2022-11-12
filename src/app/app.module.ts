@@ -7,7 +7,7 @@ import { ProductosComponent } from './productos/productos.component';
 import { AcercadeComponent } from './acercade/acercade.component';
 import { TrabajadorComponent } from './trabajador/trabajador.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { DadoComponent } from './dado/dado.component';
 import { VistadadoComponent } from './vistadado/vistadado.component';
 import { CronometroComponent } from './cronometro/cronometro.component';
@@ -16,6 +16,8 @@ import { SelectornumericoComponent } from './selectornumerico/selectornumerico.c
 import { ElementosModule } from './elementos/elementos.module';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormularioComponent } from './formulario/formulario.component';
+import { ConfirmacionComponent } from './confirmacion/confirmacion.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,16 @@ import { HttpClientModule } from '@angular/common/http';
     VistadadoComponent,
     CronometroComponent,
     SelectornumericoComponent,
+    FormularioComponent,
+    ConfirmacionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ElementosModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

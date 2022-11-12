@@ -8,6 +8,7 @@ import { VistadadoComponent } from './vistadado/vistadado.component';
 import { SelectornumericoComponent } from './selectornumerico/selectornumerico.component';
 import { Dado1Component } from './elementos/dado1/dado1.component';
 import { JsonvistaComponent } from './elementos/jsonvista/jsonvista.component';
+import { FormularioComponent } from './formulario/formulario.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'selectornumerico', component: SelectornumericoComponent },
   { path: 'dado1', component: Dado1Component },
   { path: 'jsonvista', component: JsonvistaComponent },
+  { path: 'formulario', component: FormularioComponent },
 ];
 
 @NgModule({

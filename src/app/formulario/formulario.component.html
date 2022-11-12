@@ -1,0 +1,36 @@
+<div class="main-wrapper">
+    <div class="wrapper">
+        <button class="btn btn-primary"(click)="addSkill()">Agregar Skill</button>
+        <button class="btn btn-success"(click)="comprobarFormulario()">Comprobar</button>
+        <button class="btn btn-danger"(click)="resetFormulario()">Limpiar</button>
+
+        <form [formGroup]="formParent" class="form-parent">
+
+            <div class="form-field">
+                <input type="text" placeholder="Ingresa tu nombre" formControlName="name">
+            </div>
+
+            <div class="form-grid" formArrayName="skills">
+
+                <div class="form-field" *ngFor="let skill of getCtrl('skills',formParent).controls;index as formChild">
+
+                    <div class="form-block" [formGroupName]="formChild">
+                        <div class="form-field">
+                            <input type="text" placeholder="Lenguaje" formControlName="lenguaje">
+                        </div>
+                        <div class="form-field">
+                            <input type="text" placeholder="projectUrl" formControlName="projectUrl">
+                        </div>
+                        <div class="form-field">
+                            <input type="text" placeholder="expYear" formControlName="expYear">
+                        </div>
+                        <button class="btn btn-danger" (click)="removeSkill(formChild)">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="wrapper">
+        <app-confirmacion [formParent]="formParent"></app-confirmacion>
+    </div>
+</div>
